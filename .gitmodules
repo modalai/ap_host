@@ -1,0 +1,3 @@
+[submodule "libslpi-link-api"]
+	path = libslpi-link-api
+	url = https://gitlab.com/voxl-public/voxl-sdk/core-libs/libslpi-link-api.git
