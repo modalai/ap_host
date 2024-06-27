@@ -158,6 +158,10 @@ int main() {
 		fprintf(stderr, "Bind failed!\n");
 	}
 
+	// allow re-bind on the same port
+	int one = 1;
+	setsockopt(socket_fd, SOL_SOCKET, SO_REUSEADDR,(char *)&one, sizeof(one));
+
 	remote_addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
 	remote_addr.sin_family = AF_INET;
 	remote_addr.sin_port = htons(14559);
